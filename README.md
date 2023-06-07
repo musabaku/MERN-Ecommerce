@@ -29,23 +29,16 @@ Unfortunately, due to technical issues, we are unable to provide the structure o
 Getting Started
 If you would like to run a local copy of this project, follow these steps:
 
-Clone the repository using the following command:
-bash
-Copy code
-git clone https://github.com/musabaku/MERN-Ecommerce.git
-Install the necessary NPM packages with:
-bash
-Copy code
-cd MERN-Ecommerce
-npm install
-Update the config.js file with your API key:
-JS
-Copy code
-const API_KEY = 'ENTER YOUR API';
-Start the server using:
-sql
-Copy code
-npm start
+Clone the GitHub repository by running git clone https://github.com/musabaku/MERN-Ecommerce.git
+
+Go into the project folder using cd MERN-Ecommerce
+
+Install dependencies with npm install
+
+Replace the example API key in the config.js file with your actual API key.
+
+Start the server with npm start
+
 Please ensure that Node.js and npm are installed on your machine. You can find instructions on how to install these here.
 
 Contributing
@@ -66,4 +59,3 @@ MongoDB
 Express.js
 React.js
 Node.js
-
