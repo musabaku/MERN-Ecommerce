@@ -5,7 +5,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please enter product name"],
   },
-  rating: {
+  ratings: {
     type: Number,
     default: 0,
   },
@@ -40,12 +40,22 @@ const productSchema = new mongoose.Schema({
     maxLength: [4, "stock cant exceed 4 characters"],
     default: 0,
   },
-  numofReviews: {
-    name: {
+numofReviews: {
+    type: Number,
+    default: 0,
+  },
+  reviews: [
+    {
+      user:{
+        type : mongoose.Schema.ObjectId,
+        ref: "User",
+        required
+      },
+  name: {
       type: String,
       required: true,
     },
-    review: {
+    rating: {
       type: Number,
       required: true,
     },
@@ -53,7 +63,8 @@ const productSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-  },
+      
+  }],
   createdAt: {
     type: Date,
     default: Date.now,
